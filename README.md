@@ -1,11 +1,17 @@
-# Project Template: React/Rails API
+# BevBuy
 
-## Description
+## Database Relations
+
+
+
+## Project Template: React/Rails API
+
+### Description
 
 This project is scaffolded so that you can build a React frontend and Rails
 backend together, and easily deploy them to Heroku.
 
-## Requirements
+### Requirements
 
 - Ruby 2.7.4
 - NodeJS (v16), and npm
@@ -15,7 +21,7 @@ backend together, and easily deploy them to Heroku.
 See Environment Setup below for instructions on installing these tools if you
 don't already have them.
 
-## Setup
+### Setup
 
 Start by **cloning** (not forking) the project template repository and removing
 the remote:
@@ -70,7 +76,7 @@ your project. Here's a list of some [awesome readmes][] for inspiration.
 
 [awesome readmes]: https://github.com/matiassingers/awesome-readme
 
-## Deploying
+### Deploying
 
 This application has all the starter code needed to help you deploy your
 application to Heroku. It's recommended to deploy your project early and push up
@@ -124,9 +130,9 @@ You can view your deployed app with:
 heroku open
 ```
 
-## Environment Setup
+### Environment Setup
 
-### Install the Latest Ruby Version
+#### Install the Latest Ruby Version
 
 Verify which version of Ruby you're running by entering this in the terminal:
 
@@ -154,7 +160,7 @@ gem install rails
 
 [supported runtimes]: https://devcenter.heroku.com/articles/ruby-support#supported-runtimes
 
-### Install NodeJS
+#### Install NodeJS
 
 Verify you are running a recent version of Node with:
 
@@ -177,12 +183,12 @@ You can also update your npm version with:
 npm i -g npm
 ```
 
-### Sign Up for a [Heroku Account][heroku signup]
+#### Sign Up for a [Heroku Account][heroku signup]
 
 You can sign up at for a free account at
 [https://signup.heroku.com/devcenter][heroku signup].
 
-### Download the [Heroku CLI][heroku cli] Application
+#### Download the [Heroku CLI][heroku cli] Application
 
 Download the Heroku CLI. For OSX users, you can use Homebrew:
 
@@ -212,14 +218,14 @@ logging in, close the browser window and return to the terminal. You can run
 [heroku signup]: https://signup.heroku.com/devcenter
 [heroku cli]: https://devcenter.heroku.com/articles/heroku-cli#download-and-install
 
-### Install Postgresql
+#### Install Postgresql
 
 Heroku requires that you use PostgreSQL for your database instead of SQLite.
 PostgreSQL (or just Postgres for short) is an advanced database management
 system with more features than SQLite. If you don't already have it installed,
 you'll need to set it up.
 
-#### PostgreSQL Installation for WSL
+##### PostgreSQL Installation for WSL
 
 To install Postgres for WSL, run the following commands from your Ubuntu terminal:
 
@@ -268,7 +274,7 @@ get stuck.
 
 [postgresql wsl]: https://docs.microsoft.com/en-us/windows/wsl/tutorials/wsl-database#install-postgresql
 
-#### Postgresql Installation for OSX
+##### Postgresql Installation for OSX
 
 To install Postgres for OSX, you can use Homebrew:
 
@@ -283,7 +289,7 @@ service:
 brew services start postgresql
 ```
 
-## Troubleshooting
+### Troubleshooting
 
 If you ran into any errors along the way, here are some things you can try to
 troubleshoot:
