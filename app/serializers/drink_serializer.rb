@@ -1,4 +1,4 @@
 class DrinkSerializer < ActiveModel::Serializer
-  attributes :id, :points, :favorite
+  attributes :id, :size, :cold, :favorite
   has_one :user_id
 end

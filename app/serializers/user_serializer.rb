@@ -1,3 +1,3 @@
 class UserSerializer < ActiveModel::Serializer
-  attributes :id, :user_name, :wallet, :member_points
+  attributes :id, :username, :wallet, :member_points
 end

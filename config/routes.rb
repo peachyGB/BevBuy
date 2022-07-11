@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   
-  resources :categories
+  resources :customizations
   resources :ingredients
   resources :drinks
   resources :users
