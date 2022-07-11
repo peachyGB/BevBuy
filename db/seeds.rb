@@ -1,11 +1,17 @@
 require 'faker'
 
+Customization.destroy_all
+Drink.destroy_all
+User.destroy_all
+Ingredient.destroy_all
+
+
 puts "Seeding users..."
 User.create(username:"BeverageQueen", wallet: 41.50, member_points: 100)
-User.create(username: Faker::Internet.username(specifier: 5..16), wallet: Faker::Number.decimal(l_digits: 2), member_points: Faker::Number.within(range: 10..100))
-User.create(username: Faker::Internet.username(specifier: 5..16), wallet: Faker::Number.decimal(l_digits: 2), member_points: Faker::Number.within(range: 10..100))
-User.create(username: Faker::Internet.username(specifier: 5..16), wallet: Faker::Number.decimal(l_digits: 2), member_points: Faker::Number.within(range: 10..100))
-User.create(username: Faker::Internet.username(specifier: 5..16), wallet: Faker::Number.decimal(l_digits: 2), member_points: Faker::Number.within(range: 10..100))
+User.create(username: Faker::Internet.username(specifier: 5..16), wallet: Faker::Number.decimal(l_digits: 2), member_points: Faker::Number.within(range: 10..200))
+User.create(username: Faker::Internet.username(specifier: 5..16), wallet: Faker::Number.decimal(l_digits: 2), member_points: Faker::Number.within(range: 10..200))
+User.create(username: Faker::Internet.username(specifier: 5..16), wallet: Faker::Number.decimal(l_digits: 2), member_points: Faker::Number.within(range: 10..200))
+User.create(username: Faker::Internet.username(specifier: 5..16), wallet: Faker::Number.decimal(l_digits: 2), member_points: Faker::Number.within(range: 10..200))
 puts "Seeding done!"
 
 
