@@ -2,7 +2,7 @@ class UsersController < ApplicationController
         #GET /users
     def index
         users = User.all
-        render json: users, except: [:created_at, :updated_at]
+        render json: users, except: [:created_at, :updated_at] 
     end
 
     #GET /users/:id
@@ -12,6 +12,16 @@ class UsersController < ApplicationController
             render json: user
         else
             render json: { error: "User not found" }, status: :not_found
+        end
+    end
+
+    # GET /users/:id/drinks
+    def userbev
+        user = User.find_by(id: params[:id])
+        if user
+            render json: user.drinks
+        else
+            render json: { error: "User or Drinks not found" }, status: :not_found
         end
     end
 

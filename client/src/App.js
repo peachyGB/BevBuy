@@ -10,6 +10,7 @@ import { Switch, Route } from "react-router-dom";
 function App() {
   //fetches data from server on inital page load
   const [ingredientsList, setIngredientsList] = useState([]);
+  const [drinkID, setDrinkID] = useState();
 
   useEffect(() => {
     fetch("http://localhost:3000/ingredients")
@@ -19,7 +20,7 @@ function App() {
 
   return (
     <div className="App">
-      <MenuBar />
+      <MenuBar setDrinkID={setDrinkID} />
       <Switch>
         <Route path="/cart">
           <Cart />
@@ -28,7 +29,7 @@ function App() {
           <LogInOut className="login" />
         </Route>
         <Route path="/create">
-          <DrinkBuilder ingredientsList={ingredientsList} />
+          <DrinkBuilder ingredientsList={ingredientsList} drinkID={drinkID} />
         </Route>
         <Route exact path="/">
           <Home className="home" />

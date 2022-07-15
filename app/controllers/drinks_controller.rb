@@ -15,11 +15,11 @@ class DrinksController < ApplicationController
         end
     end
 
-#     #POST /drinks
-#     def create
-#         drink = Drink.create(drink_params)
-#         render json: drink, status: :created
-#     end
+    #POST /drinks
+    def create
+        drink = Drink.create(drink_params)
+        render json: drink, status: :created
+    end
 
 
 #     #PATCH /drinks/:id
@@ -33,20 +33,20 @@ class DrinksController < ApplicationController
 #         end
 #     end
 
-#     #DELETE /drinks/:id
-#     def destroy
-#     drink = Drink.find_by(id: params[:id])
-#         if drink
-#             drink.destroy
-#             render json: {}
-#         else
-#             render json: { error: "Drink not found" }, status: :not_found
-#         end
-#     end
+    #DELETE /drinks/:id
+    def destroy
+    drink = Drink.find_by(id: params[:id])
+        if drink
+            drink.destroy
+            render json: {}
+        else
+            render json: { error: "Drink not found" }, status: :not_found
+        end
+    end
 
-# private
+private
 
-#     def drink_params
-#       params.permit(:size, :favorite, :user_id)
-#     end
+    def drink_params
+      params.permit(:size, :favorite, :user_id)
+    end
 end

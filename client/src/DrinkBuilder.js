@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import IngredientTile from "./IngredientTile";
 
-function DrinkBuilder({ ingredientsList }) {
+function DrinkBuilder({ ingredientsList, drinkID }) {
   const base = ingredientsList.filter((item) => item.category === "Base");
   const filler = ingredientsList.filter((item) => item.category === "Creamer");
   const flavor = ingredientsList.filter((item) => item.category === "Flavor");
@@ -17,6 +17,7 @@ function DrinkBuilder({ ingredientsList }) {
       category={ingredient.category}
       cost={ingredient.cost}
       points={ingredient.points}
+      drinkID={drinkID}
     />
   ));
 
@@ -28,8 +29,10 @@ function DrinkBuilder({ ingredientsList }) {
       category={ingredient.category}
       cost={ingredient.cost}
       points={ingredient.points}
+      drinkID={drinkID}
     />
   ));
+
   const mappedSweetner = sweetner.map((ingredient) => (
     <IngredientTile
       key={ingredient.id}
@@ -38,6 +41,7 @@ function DrinkBuilder({ ingredientsList }) {
       category={ingredient.category}
       cost={ingredient.cost}
       points={ingredient.points}
+      drinkID={drinkID}
     />
   ));
 
@@ -49,6 +53,7 @@ function DrinkBuilder({ ingredientsList }) {
       category={ingredient.category}
       cost={ingredient.cost}
       points={ingredient.points}
+      drinkID={drinkID}
     />
   ));
 
@@ -67,9 +72,3 @@ function DrinkBuilder({ ingredientsList }) {
 }
 
 export default DrinkBuilder;
-
-// onClicks - for sections that allow multibple items
-//if selectd ? remve from drink, set to unselected : add to drink, set to selected
-
-// onClicks - for sections that allow one selection (Base)
-//if selectd  setState to new item
